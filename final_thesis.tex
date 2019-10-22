@@ -329,6 +329,9 @@ Tensorflow\cite{tensorflow} is a machine learning framework primarily written in
 
 Tensorflow continues to grow in support with new frameworks like Kera that aim to simplify common operations and overall streamline the process and show no signs of stopping with a stable release only 2 months ago.
 
+\section{PyTorch}
+%TODO
+
 \section{MNIST dataset}
 The MNIST dataset\cite{lecun-website} is a commonly used dataset for machine learning that consists of 70,000 images of handwritten digits (60,000 training images and 10,000 test images) and the associated labels for each of these images. The dataset is commonly chosen due to its simplicity and many frameworks support it out of the box.
 \begin{figure}[H]
@@ -349,175 +352,70 @@ However this dataset is not without its faults, there are quite a number of imag
 \end{figure}
 The dataset is also often constructed as too small and too simple, consisting of only 70,000 images of greyscale images. Compared to datasets such as CIFAR10 which has the same amount of images but 32x32 colour images or another dataset like ImageNet consisting of 1,331,167 images, MNIST is certainly behind. However, MNIST has been used and is continued to be used as a way to quickly validate a machine learning algorithm before moving on to larger more complicated datasets that take much more time to compute.
 
+\chapter{Results}
+\section{Introduction}
+The primary idea behind this thesis was to create a system where we could reliably compare 2 machine learning systems with one using stochastic computing and the other using convetional computing. While attempts have been made in building up entirely new systems from the ground up using stochastic computing to accomplish a machine learning task[cite]. There are little to none about system using stochastic computing inside of existing machine learning frameworks such that both systems are on an even playing field and you aren't comparing orange's and apple's. This was the goal we set out to accomplish, creating a system within an existing machine learning framework that could be applied to multiple datasets.
 
-\chapter{Preliminary results}
+\section{The design}
+Consdering that the goal of this thesis was to compare stochastic computing and conventional computing in the field of machine learning, the first step would be to implement the core part of a machine learning framework which is the matrix multiplication, this consists of three parts, the conversion from a binary floating point number to a stochastic number, the multiplication between the rows and columns of the matrix and finally the addition of each of the rows of the matrix. While most of thesis operations would be easy outside of a machine learning framework, implementing them within a machine learning framework requires a different way of thinking as each operation needs to be parrallizable and as such you are often restricted with what you are "allowed" to do, one such example of this is the heavy discouragement of the use of for loops[CITE] as used incorrectly this requires the data being processed to be passed between the GPU and CPU and will likely cause massive slowdowns.
+\\\\
+Each task had multiple ways of implementing the solution and each came with their own benefits and drawbacks, which will be detailed below.
 
-\section{Stochastic numbers}
-\subsection{Stochastic numbers: Abstract}
-These preliminary results are based upon the idea of if we could use stochastic numbers as a way of improving neural networks, whether that is through the reduction or datasets, noise tolerance, computation complexity or anything that would give it some edge over a more traditional network.
-The idea mainly comes from spiking neural networks and more theories about how the human brain works on probabilistic methods rather than hardcoded logic.
-
-All of these results were trained with the MNIST dataset, 20 repetitions using a normal model with the following structure.
+\section{The conversion}
+One of the secondary goals of this project was to create essentially a dropin machine learning layer that would use stochastic computing, this would mean that the dropin would have to convert the floating points it had received from the previous layer, convert it to a stochastic number for processing and then convert it back after the computation.
+\\\\
+The general operation for how a binary number is converted to a stochastic number is 
 \begin{enumerate}
-    \item Dense input layer
-    \item Dropout layer (0.2 probability)
-    \item Dense layer (RELU activation)
-    \item Dropout layer (0.2 probability)
-    \item Dense layer (Softmax activation)
+	\item Create a boolean array the size of the stochastic number you want
+	\item For each boolean in the array, set it to the condition (value $\geq$ random\_float(0,1))
 \end{enumerate}
-The stochastic model was an extension of the normal model but the first layer was the custom Stochastic layer.
+This is further shown in the pseudocode below
+\\\\
+<code></code>\\
+However in terms of a machine learning framework the following is done instead, 
 \begin{enumerate}
-    \item Custom Stochastic layer
-    \item Dense input layer
-    \item Dense layer (RELU activation)
-    \item Dense layer (Softmax activation)
-\end{enumerate}
-
-TODO, talk about results of stochastic numbers compared to the normal model
-
-\subsection{Bit size}
-The following graph show the accuracy results when the bit size of the stochastic layer was modified.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/bitsize.png}
-\caption{Bit size results.}
-\label{fig:bitsize}
-\end{figure}
-From this test we can see that there is not much difference when I start increasing the number of bits, so for the rest of these tests, they were done with 8 bits.
-
-However interestingly to note that above 128 bits we start seeing a large drop in accuracy, I'm unsure of the reason behind this.
-
-\subsection{Noise tests}
-The following graph shows the accuracy results when a normal model and a stochastic model are trained with the MNIST dataset and then fed the testing dataset from the Noisy MNIST dataset.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/noise_test.png}
-\caption{Noise test results.}
-\label{fig:noise}
-\end{figure}
-In this test, we can see compared to the normal, the stochastic model loses 0.002\% in accuracy. However when both of these pre-trained models are fed the noisy MNIST dataset, the stochastic model fairs considerably better.
-
-However, upon further consideration, this seems to be an artifact of the dataset, after some investigation, there was a slight mistake in the custom stochastic layer which meant that all the values in the training and testing datasets for the stochastic layer were inverted. 
-This should not have affected the results, comparing the images below shows an image that has been passed through the stochastic layer and both the mistake and fixed version shows minor differences other than the inversion.
-\begin{figure}[H]
-\centering
-\includegraphics[width=6cm]{results/stochastic_layer_pass_inverted.png}
-\caption{Left is original, right is inverted stochastic layer result.}
-\label{fig:noise_stochastic_inverted}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=6cm]{results/stochastic_layer_pass_corrected.png}
-\caption{Left is original, right is corrected stochastic layer result.}
-\label{fig:noise_stochastic}
-\end{figure}
-
-After the correction, the advantage disappears.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/bitsize_corrected.png}
-\caption{Corrected noise test results.}
-\label{fig:noise_corrected}
-\end{figure}
-
-This is further shown by inverting the test and training data for the normal model, this now shows that the results have flipped and that this result is an artefact of the dataset rather than the stochastic layer.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/normal_inverted.png}
-\caption{Inverted noise test results.}
-\label{fig:noise_normal_inverted}
-\end{figure}
-
-\vfill
-\subsection{Noise shuffle}
-The following graph shows the accuracy results when we take both the normal dataset and the noisy dataset and shuffle them together, producing a new dataset that contains normal and noisy MNIST images.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/noise_shuffle.png}
-\caption{Noise shuffle results.}
-\label{fig:noise_shuffle}
-\end{figure}
-The stochastic model performs similarly to the normal model, nothing much to note here.
-
-\vfill
-\subsection{Reduced dataset}
-The following graph shows the accuracy of both the normal model and stochastic model as the size of the training datset is reduced.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/reduced_dataset.png}
-\caption{Bit size results.}
-\label{fig:dataset}
-\end{figure}
-The stochastic model has significantly worse performance as the dataset size decreases.
-
-\vfill
-\subsection{Reduced Epochs}
-The following graph shows the accuracy of the test dataset as training epochs are increased.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/epoch.png}
-\caption{Epoch results.}
-\label{fig:epoch}
-\end{figure}
-The stochastic model performs similarly to the normal model, nothing much to note here.
-
-\subsection{Convolution2D}
-For this test, the model was changed to use a convolution model of the following form
-\begin{enumerate}
-    \item Conv2D(32 neurons, (3x3 kernel), RELU activation)
-    \item MaxPooling2D((2x2 kernel))
-    \item Conv2D(64 neurons, (3x3 kernel), RELU activation)
-    \item MaxPooling2D((2x2 kernel))
-    \item Conv2D(64 neurons, (3x3 kernel), RELU activation)
-    \item Flatten layer
-    \item Dense layer (64 neurons, RELU activation)
-    \item Dense layer (10 neurons)
-\end{enumerate}
-With the stochastic model being
-\begin{enumerate}
-    \item StochasticLayer(728 neurons)
-    \item Reshape
-    \item Conv2D(32 neurons, (3x3 kernel), RELU activation)
-    \item MaxPooling2D((2x2 kernel))
-    \item Conv2D(64 neurons, (3x3 kernel), RELU activation)
-    \item MaxPooling2D((2x2 kernel))
-    \item Conv2D(64 neurons, (3x3 kernel), RELU activation)
-    \item Flatten layer
-    \item Dense layer (64 neurons, RELU activation)
-    \item Dense layer (10 neurons)
+	\item Take the matrix of floating points, and add an extra dimension to it
+	\item Scale the size of the newly created dimensional such that it repeats each value for the size of the stochastic number
+	\item Apply (value $\geq$ random\_float(0,1)) over the entire matrix
 \end{enumerate}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/conv2d.png}
-\caption{Conv2D results.}
-\label{fig:conv2d}
-\end{figure}
-The stochastic model performs similarly to the normal model, nothing much to note here.
+This covers the general approach to converting binary numbers to stochastic numbers, converting them back means simply taking the mean of the entire array/matrix. However while this covers the general approach there are some nuances that need to be discussed. The first is the use of the random number generator, stochastic numbers are very sensitive to correlation[CITE] and so each random number must be generated separately fomr the other, while a general psuedorandom number generator (PRNG) will certainly do the trick, there has been studies showing better results can be achieved with a customised PRNG[CITE], we decided against going down this route as it would be complicated to integrate and ultimately detract form the goal of this thesis.
+\\\\
+Another nuace of this algorithm is the size of the stochastic number, having more bits in your stochastic number will ultimately improve its performance but it comes at the cost of memory (which can balloon very quickly with large matrixes) and
+computational time. Plus after further investigation, we found that increasing the number of bits has diminising effects.
+\\\\
+<graph></graph>\\
+As shown in the graph above, as the bits increase, the varience decreases but it reaches a point where the number of bits accounts for such a small change in the varience that it is ultimately not worth the memory or time. We did some research to try and find a way to have progressive accuracy woth stochastic computing but we unable to find and instances of such a case. And finally the last nuace is the range of the stochastic numbers as the conditional (value $\geq$ random\_float(0,1)) will give a range on the stochastic numbers between 0 and 1, there exists an alternative form for negative numbers where the conditional becomes (value+1/2 $\geq$ random\_float(0,1) essentially the -1 to 1 range of value is mapped between 0 and 1. However there are a few caveats with this, one is that now each bit of the stochastic number represents a larger range and thus you need a large amount of bits to accurately represent a number with a large amount of digits after the decimal point, the second problem is that numbers can becomes small enough that when represented in a stochastic format they essentially become zero and no longer have an impact on the final value when they might have had a small but meaningful impact on the final value if they were not being computated stochastically. 
 
-\subsection{Dense layer size}
-The following graph shows the accuracy of the test dataset as the size of the hidden dense layers neurons are increased.
-\begin{figure}[H]
-\centering
-\includegraphics[width=16cm]{results/dense_layer.png}
-\caption{Dense layer results.}
-\label{fig:denselayer}
-\end{figure}
+%"""FINAL PROBLEM: Something to do with operators and them not working correctly?"""
 
-This is by far the most interesting results so far and thus the results above are 30 samples instead of the usual 20 samples. The results show that for hidden dense layer sizes of 32 and below the stochastic layer fairs much better, however, I'm still unsure if this is because of the stochastic layer or another artefact of the dataset, I will continue to research.
+\section{Multiplication}
+The multiplication of stochastic numbers is probably the easiest operation to implement, the most reliable and what attracted us to look into stochastic computing itself. Multiplication of stochastic numbers is implemented in one of two ways, using an AND gate or the XNOR gate depending on the implementation of the conversion step, if the conversion step places the numbers in a bipolar format (range: -1, 1) then an XNOR gate is used otherwise the AND gate is used.
 
-\chapter{Conclusions and Future Work}
+\section{Addition}
+The last step of a matrix multiplication is the addition, but this is the part where things didn't work out. So the first thing about stochastic addition is you cannot represent a number larger than what your stochastic range is, for example this means that you cannot represent a number larger than 1 if you are in a bipolar/unipolar format this means you have two forms of addition, saturating and non-saturating, in saturating addition it works similarily to normal addition with the exception that you cannot go over the limit. In non-saturating addition, the resulting addition is divided by 2, this ensures that the stochastic number always stays within range.
+\\\\
+However the 2 caveats of stochastic addition leads to problems when trying to do a matrix multiplication, starting the most common addition formation, non saturating where a MUX gate is used because the result is constantly divided by 2, consecutive additions result in the number getting smaller and smaller with no way of recovering the original value.\\
+If a,b,c and d are stochastic numbers then the non-saturating addition gets represented as,
+$$\frac{\frac{\frac{a+b}{2}+c}{2}+d}{2} \neq a+b+c+d$$
+A idea to get around this would be to premultiply each number beforehand such that the equation becomes
+$$\frac{\frac{\frac{2a+2b}{2}+4c}{2}+8d}{2} = a+b+c+d$$
+But the numbers gets progressively larger by $2^x$ which would easily balloon out of hand for example if you have a 512 size array.
+\\\\
+Finally there is non-saturating which acts very much like a normal addition, however the problem with this to do with the scale of the numbers used within a neural network, the floating point numbers coming in from the previous layer in the neural network are normalized between 0 and 1 but these numbers can easily reach values that are smaller than 0.01 and representing really small numbers stochastic is not really doable without a high number of bits, even then the amount of bit required would easily exceed any systems memory and computation power. The other problem is the weights 
+
+\section{Future Work}
+So far in this thesis we have detailed how a stochastic neural network might work and the parts that would be required to do so, but haven't proposed a solution. This section will talk about the future work required to create stochastic neural network within a machine learning framework.
+
+
+
+
+\chapter{Conclusions}
 \label{chap:Conclusions}
 
 \section{Conclusions}
 \label{sec:ConclusionsConclusions}
-In conclusion, it seems that the stochastic layer has a minimum impact on the performance of neural networks in all the tests I have done and in some case worse performance. My speculation as to why the stochastic layer is not enough to cause any drastic improvements is that the stochastic layer is not enough of a change of the standard neural network and seems to be just adding noise which causes a slight performance dip, however regarding the dense layer test there seems to be some ground to be gained if the addition of this noise in small layer size networks perform better than the standard model.
-
-\section{Future work}
-\label{sec:ConclustionsFuturework}
-My next steps for this project is to look into alternative ways of trying to use the stochastic network, another representation that might yield better results and into the dense layer tests to see how noise is affecting the neural network.
-It is notable that MNIST may not provide the complexity that I'm looking for, especially after the inverted artefact. My next steps for this is to look into more complicated datasets like CIFAR100 to see if I can find performance in that area.
+In conclusion, trying to apply stochastic computing to the field of machine learning through matrix operations alone is unlikely to succeed. Stochastic computing needs a lot more groundwork, regarding the inaccuracy and range limitation is order to be used outside its own field and for stochastic computing to be able to be fully integrated with machine learning there will need to be a large paradigm shift in how they are used and applied.
 
 \clearemptydoublepage
 \chapter{Abbreviations}

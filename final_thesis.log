@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.5.15)  5 JUN 2019 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.5.15)  17 OCT 2019 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**preliminary_thesis.tex
-(./preliminary_thesis.tex
+**final_thesis.tex
+(./final_thesis.tex
 LaTeX2e <2018-12-01>
 (./BYUPhys.cls
 Document Class: BYUPhys 
@@ -345,9 +345,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box33
 \@float@everytoks=\toks26
 \@floatcapt=\box34
-)
-(./preliminary_thesis.aux)
-\openout1 = `preliminary_thesis.aux'.
+) (./final_thesis.aux)
+\openout1 = `final_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 215.
 LaTeX Font Info:    ... okay on input line 215.
@@ -422,16 +421,16 @@ LaTeX Info: Redefining \ref on input line 215.
 LaTeX Info: Redefining \pageref on input line 215.
 LaTeX Info: Redefining \nameref on input line 215.
 
-(./preliminary_thesis.out) (./preliminary_thesis.out)
+(./final_thesis.out) (./final_thesis.out)
 \@outlinefile=\write3
-\openout3 = `preliminary_thesis.out'.
+\openout3 = `final_thesis.out'.
 
 
 Overfull \hbox (9.40733pt too wide) in paragraph at lines 223--223
  [] 
  []
 
-<MQlogo_stacked.pdf, id=132, 219.12566pt x 208.59329pt>
+<MQlogo_stacked.pdf, id=120, 219.12566pt x 208.59329pt>
 File: MQlogo_stacked.pdf Graphic file (type pdf)
 <use MQlogo_stacked.pdf>
 Package pdftex.def Info: MQlogo_stacked.pdf  used on input line 223.
@@ -446,7 +445,7 @@ Package pdftex.def Info: MQlogo_stacked.pdf  used on input line 223.
 
 ] [4
 
-] (./preliminary_thesis.toc
+] (./final_thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -465,7 +464,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ])
 \tf@toc=\write4
-\openout4 = `preliminary_thesis.toc'.
+\openout4 = `final_thesis.toc'.
 
 
 
@@ -474,9 +473,28 @@ Make it at least 14.49998pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[6] (./preliminary_thesis.lof)
+[6] (./final_thesis.lof
+
+LaTeX Warning: Citation `fig:neuron_model' on page vii undefined on input line 
+3.
+
+
+LaTeX Warning: Citation `fig:sigmoid' on page vii undefined on input line 4.
+
+
+LaTeX Warning: Citation `fig:neural_network_model' on page vii undefined on inp
+ut line 5.
+
+
+LaTeX Warning: Citation `fig:mnist' on page vii undefined on input line 8.
+
+
+LaTeX Warning: Citation `fig:mnist_incorrect' on page vii undefined on input li
+ne 9.
+
+)
 \tf@lof=\write5
-\openout5 = `preliminary_thesis.lof'.
+\openout5 = `final_thesis.lof'.
 
  [7
 
@@ -493,176 +511,206 @@ Chapter 1.
 
 ]
 Chapter 2.
-<pictures/neuron_model.png, id=270, 357.7365pt x 172.36395pt>
+
+LaTeX Warning: Citation `neural-network-history' on page 2 undefined on input l
+ine 264.
+
+<pictures/neuron_model.png, id=222, 357.7365pt x 172.36395pt>
 File: pictures/neuron_model.png Graphic file (type png)
 <use pictures/neuron_model.png>
 Package pdftex.def Info: pictures/neuron_model.png  used on input line 271.
 (pdftex.def)             Requested size: 227.62204pt x 109.6708pt.
-<pictures/sigmoid.png, id=273, 77.088pt x 51.3117pt>
+
+LaTeX Warning: Citation `fig:neuron_model' on page 2 undefined on input line 27
+2.
+
+
+LaTeX Warning: Citation `fig:neuron_model' on page 2 undefined on input line 27
+2.
+
+<pictures/sigmoid.png, id=223, 77.088pt x 51.3117pt>
 File: pictures/sigmoid.png Graphic file (type png)
 <use pictures/sigmoid.png>
 Package pdftex.def Info: pictures/sigmoid.png  used on input line 279.
 (pdftex.def)             Requested size: 227.62204pt x 151.52946pt.
+
+LaTeX Warning: Citation `fig:sigmoid' on page 2 undefined on input line 280.
+
+
+LaTeX Warning: Citation `fig:sigmoid' on page 2 undefined on input line 280.
+
 [2
 
  <./pictures/neuron_model.png (PNG copy)>]
-<pictures/neural_network_model.png, id=282, 1204.5pt x 1448.41125pt>
+<pictures/neural_network_model.png, id=229, 1204.5pt x 1448.41125pt>
 File: pictures/neural_network_model.png Graphic file (type png)
 <use pictures/neural_network_model.png>
 Package pdftex.def Info: pictures/neural_network_model.png  used on input line 
 287.
 (pdftex.def)             Requested size: 227.62204pt x 273.69814pt.
- [3 <./pictures/sigmoid.png>]
-<pictures/gradient.png, id=292, 163.5711pt x 142.6128pt>
+
+
+LaTeX Warning: Citation `fig:neural_network_model' on page 3 undefined on input
+ line 288.
+
+
+LaTeX Warning: Citation `fig:neural_network_model' on page 3 undefined on input
+ line 288.
+
+[3 <./pictures/sigmoid.png>]
+
+LaTeX Warning: Citation `nielsen' on page 4 undefined on input line 292.
+
+
+LaTeX Warning: Citation `towards-data-science' on page 4 undefined on input lin
+e 297.
+
+<pictures/gradient.png, id=235, 163.5711pt x 142.6128pt>
 File: pictures/gradient.png Graphic file (type png)
 <use pictures/gradient.png>
 Package pdftex.def Info: pictures/gradient.png  used on input line 301.
 (pdftex.def)             Requested size: 170.71652pt x 148.8491pt.
-
 [4 <./pictures/neural_network_model.png>]
-<pictures/global_minima.png, id=299, 316.7835pt x 188.50426pt>
+<pictures/global_minima.png, id=241, 316.7835pt x 188.50426pt>
 File: pictures/global_minima.png Graphic file (type png)
 <use pictures/global_minima.png>
 Package pdftex.def Info: pictures/global_minima.png  used on input line 310.
 (pdftex.def)             Requested size: 284.52756pt x 169.30997pt.
  [5 <./pictures/gradient.png>]
+
+LaTeX Warning: Citation `tensorflow' on page 6 undefined on input line 328.
+
 [6 <./pictures/global_minima.png>]
-<pictures/mnist.png, id=316, 596.2275pt x 362.35374pt>
+
+LaTeX Warning: Citation `lecun-website' on page 7 undefined on input line 336.
+
+<pictures/mnist.png, id=255, 596.2275pt x 362.35374pt>
 File: pictures/mnist.png Graphic file (type png)
 <use pictures/mnist.png>
-Package pdftex.def Info: pictures/mnist.png  used on input line 336.
+Package pdftex.def Info: pictures/mnist.png  used on input line 339.
 (pdftex.def)             Requested size: 227.62204pt x 138.33722pt.
-<pictures/mnist_incorrect.png, id=321, 383.4325pt x 369.38pt>
+
+LaTeX Warning: Citation `fig:mnist' on page 7 undefined on input line 340.
+
+
+LaTeX Warning: Citation `fig:mnist' on page 7 undefined on input line 340.
+
+
+LaTeX Warning: Citation `lecun-98' on page 7 undefined on input line 344.
+
+
+LaTeX Warning: Citation `lecun-98' on page 7 undefined on input line 344.
+
+<pictures/mnist_incorrect.png, id=256, 383.4325pt x 369.38pt>
 File: pictures/mnist_incorrect.png Graphic file (type png)
 <use pictures/mnist_incorrect.png>
-Package pdftex.def Info: pictures/mnist_incorrect.png  used on input line 346.
+Package pdftex.def Info: pictures/mnist_incorrect.png  used on input line 349.
 (pdftex.def)             Requested size: 227.62204pt x 219.285pt.
- [7 <./pictures/mnist.png>] [8 <./pictures/mnist_incorrect.png (PNG copy)>]
+
+LaTeX Warning: Citation `fig:mnist_incorrect' on page 7 undefined on input line
+ 350.
+
+
+LaTeX Warning: Citation `fig:mnist_incorrect' on page 7 undefined on input line
+ 350.
+
+[7 <./pictures/mnist.png>] [8 <./pictures/mnist_incorrect.png (PNG copy)>]
 Chapter 3.
-<results/bitsize.png, id=337, 602.25pt x 372.39125pt>
-File: results/bitsize.png Graphic file (type png)
-<use results/bitsize.png>
-Package pdftex.def Info: results/bitsize.png  used on input line 382.
-(pdftex.def)             Requested size: 455.24408pt x 281.50313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--369
+
+ []
+
 [9
 
 ]
-<results/noise_test.png, id=351, 725.71124pt x 448.67625pt>
-File: results/noise_test.png Graphic file (type png)
-<use results/noise_test.png>
-Package pdftex.def Info: results/noise_test.png  used on input line 394.
-(pdftex.def)             Requested size: 455.24408pt x 281.46259pt.
- [10 <./results/bitsize.png>]
-<results/stochastic_layer_pass_inverted.png, id=357, 462.528pt x 346.896pt>
-File: results/stochastic_layer_pass_inverted.png Graphic file (type png)
-<use results/stochastic_layer_pass_inverted.png>
-Package pdftex.def Info: results/stochastic_layer_pass_inverted.png  used on in
-put line 404.
-(pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
-<results/stochastic_layer_pass_corrected.png, id=358, 462.528pt x 346.896pt>
-File: results/stochastic_layer_pass_corrected.png Graphic file (type png)
-<use results/stochastic_layer_pass_corrected.png>
-Package pdftex.def Info: results/stochastic_layer_pass_corrected.png  used on i
-nput line 411.
-(pdftex.def)             Requested size: 170.71652pt x 128.0372pt.
- [11 <./results/noise_test.png> <./results/stochastic_layer_pass_inverted.png>]
-<results/bitsize_corrected.png, id=365, 725.71124pt x 448.67625pt>
-File: results/bitsize_corrected.png Graphic file (type png)
-<use results/bitsize_corrected.png>
-Package pdftex.def Info: results/bitsize_corrected.png  used on input line 419.
+Underfull \hbox (badness 10000) in paragraph at lines 372--377
 
-(pdftex.def)             Requested size: 455.24408pt x 281.46259pt.
-<results/normal_inverted.png, id=366, 725.71124pt x 448.67625pt>
-File: results/normal_inverted.png Graphic file (type png)
-<use results/normal_inverted.png>
-Package pdftex.def Info: results/normal_inverted.png  used on input line 427.
-(pdftex.def)             Requested size: 455.24408pt x 281.46259pt.
- [12 <./results/stochastic_layer_pass_corrected.png> <./results/bitsize_correct
-ed.png>]
-<results/noise_shuffle.png, id=374, 602.25pt x 372.39125pt>
-File: results/noise_shuffle.png Graphic file (type png)
-<use results/noise_shuffle.png>
-Package pdftex.def Info: results/noise_shuffle.png  used on input line 437.
-(pdftex.def)             Requested size: 455.24408pt x 281.50313pt.
- [13 <./results/normal_inverted.png>]
-<results/reduced_dataset.png, id=380, 804.00375pt x 496.85625pt>
-File: results/reduced_dataset.png Graphic file (type png)
-<use results/reduced_dataset.png>
-Package pdftex.def Info: results/reduced_dataset.png  used on input line 448.
-(pdftex.def)             Requested size: 455.24408pt x 281.33081pt.
+ []
 
-[14 <./results/noise_shuffle.png>]
-<results/epoch.png, id=386, 860.21375pt x 531.9875pt>
-File: results/epoch.png Graphic file (type png)
-<use results/epoch.png>
-Package pdftex.def Info: results/epoch.png  used on input line 459.
-(pdftex.def)             Requested size: 455.24408pt x 281.54616pt.
- [15 <./results/reduced_dataset.png>]
-[16 <./results/epoch.png>]
-<results/conv2d.png, id=403, 1379.1525pt x 852.18375pt>
-File: results/conv2d.png Graphic file (type png)
-<use results/conv2d.png>
-Package pdftex.def Info: results/conv2d.png  used on input line 493.
-(pdftex.def)             Requested size: 455.24408pt x 281.29951pt.
- [17 <./results/conv2d.png>]
-<results/dense_layer.png, id=421, 1144.275pt x 707.64375pt>
-File: results/dense_layer.png Graphic file (type png)
-<use results/dense_layer.png>
-Package pdftex.def Info: results/dense_layer.png  used on input line 503.
-(pdftex.def)             Requested size: 455.24408pt x 281.53pt.
- [18 <./results/dense_layer.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--389
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 396--400
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
+
+ []
+
+[12]
 Chapter 4.
-[19
+[13
 
 ]
 Chapter 5.
-(./preliminary_thesis.bbl [20
+No file final_thesis.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
+[14
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
-\OT1/cmr/m/n/12 publication / 232906025 / ^^Lgure / ^^Lg3 / AS : 30052517523046
-7 @ 1448662193349 / Sample -[]
- []
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
+ (./final_thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 446.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 446.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
-\OT1/cmr/m/n/12 of -[] common -[] incorrect -[] classi^^Lcations -[] on -[] MNI
-ST -[] dataset -[] Numbers -[] in -[] the -[] upper -[] left -[]
- []
+Package rerunfilecheck Warning: File `final_thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 548.
- [21
+Package rerunfilecheck Info: Checksums for `final_thesis.out':
+(rerunfilecheck)             Before: D2B7AB44C5726407D61948990A6F3A09;1792
+(rerunfilecheck)             After:  D052910ABBB7576C06344D099E1C0A80;1776.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 548.
- (./preliminary_thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 548.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 548.
-Package rerunfilecheck Info: File `preliminary_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FB67FCEE9FE0EC0E2EF47B34777624FA;2100.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 548.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 446.
  ) 
 Here is how much of TeX's memory you used:
- 7979 strings out of 494518
- 119001 string characters out of 6176313
- 210922 words of memory out of 5000000
- 11405 multiletter control sequences out of 15000+600000
- 11408 words of font info for 42 fonts, out of 8000000 for 9000
+ 7845 strings out of 494518
+ 116175 string characters out of 6176313
+ 209830 words of memory out of 5000000
+ 11340 multiletter control sequences out of 15000+600000
+ 11061 words of font info for 41 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,12n,43p,802b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on preliminary_thesis.pdf (28 pages, 824225 bytes).
+ 36i,12n,43p,1331b,368s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section.4.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb>
+Output written on final_thesis.pdf (21 pages, 723898 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 500000)
- 352 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
