@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {3.7}Experiments}{16}{section.3.7}% 
 \contentsline {subsection}{\numberline {3.7.1}Accuracy of stochastic multiplication as a function of bitstream length}{16}{subsection.3.7.1}% 
 \contentsline {subsection}{\numberline {3.7.2}Accuracy of stochastic addition as a function of bitstream length}{16}{subsection.3.7.2}% 
-\contentsline {subsection}{\numberline {3.7.3}Division of bitstream to improve stochastic addition}{16}{subsection.3.7.3}% 
+\contentsline {subsection}{\numberline {3.7.3}Division of the bitstream to improve stochastic addition}{16}{subsection.3.7.3}% 
 \contentsline {chapter}{\numberline {4}Results}{18}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Introduction}{18}{section.4.1}% 
 \contentsline {section}{\numberline {4.2}Multiplication results}{18}{section.4.2}% 
@@ -38,7 +38,7 @@
 \contentsline {section}{\numberline {4.3}Addition results}{21}{section.4.3}% 
 \contentsline {subsection}{\numberline {4.3.1}Non saturating addition accuracy}{21}{subsection.4.3.1}% 
 \contentsline {subsection}{\numberline {4.3.2}Saturating addition accuracy}{23}{subsection.4.3.2}% 
-\contentsline {section}{\numberline {4.4}Spliting the bitstream}{25}{section.4.4}% 
+\contentsline {section}{\numberline {4.4}Splitting the bitstream}{25}{section.4.4}% 
 \contentsline {chapter}{\numberline {5}Conclusions}{28}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}Conclusions}{28}{section.5.1}% 
 \contentsline {chapter}{\numberline {6}Future Work}{29}{chapter.6}% 

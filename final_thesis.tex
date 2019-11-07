@@ -256,7 +256,7 @@ As such a core part of machine learning networks is a matrix multiplication and 
 
 
 \section{Neural networks: Introduction}
-Neural networks are the core structure of what many believe to be the next step in computing, machine learning. We are starting to see machine learning used to solve problems that originally were only able to be solved by people\cite{bojarski2016end}. However, all this machine learning comes at a cost, machine learning needs vast amounts of data to learn and thus large amounts of computing resources, electricity, time and even the best machine learning models work within a narrow, controlled set of inputs, anything outside this "range" are misclassified, in other words, machine learnings models are sensitive to noise and not general enough.
+Neural networks are the core structure of what many believe to be the next step in computing, machine learning. We are starting to see machine learning used to solve problems that originally were only able to be solved by peoplepeople\cite{bojarski2016end}. However, all this machine learning comes at a cost. Machine learning requires vast amounts of data to learn and thus large amounts of computing resources, electricity, time. Even the best machine learning models work within a narrow, controlled set of inputs, machine learning models are sensitive to noise and not general enough. In other words, machine learning models are really sensitive to any fluctuations in the data and easily and don’t generalize well enough to pick a “correct” answer.
 
 In my preliminary thesis, I detailed how machine learning models react to noise and shared some of my initial tests, in this final thesis we try to expand and implement a matrix multiplication, a core component of neural networks through the use of stochastic numbers.
 
@@ -275,7 +275,7 @@ To understand what each layer in a neural network is doing, it is first necessar
 \label{fig:neuron_model}
 \end{figure}
 
-Neurons are fed a set of data through its inputs which are multiplied by a specific weight, all of these numbers are then added up and fed to an activation function. An activation function is a function that maps the input to a value between 0 and 1, a commonly used activation function is the sigmoid function, numbers in the positive infinity direction become increasingly closer to 1, while numbers in the negative infinity direction become increasing closer to 0.
+Neurons are given a set of data through inputs which are then multiplied by a specific weight. All of these numbers are added up and fed to an activation function. An activation function is a function that maps the input to a value between 0 and 1, a commonly used activation function is the sigmoid function, numbers in the positive infinity direction become increasingly closer to 1, while numbers in the negative infinity direction become increasing closer to 0.
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{pictures/sigmoid.png}
@@ -283,7 +283,7 @@ Neurons are fed a set of data through its inputs which are multiplied by a speci
 \label{fig:sigmoid}
 \end{figure}
 
-The next concept is neural network layers which vary based on the task you want to try and accomplish, some examples include convolutional layers which attempt to use neural networks on squares of pixels, dropout layers which randomly pick weights to drop to try and reduce overfitting and the most common layer used to most machine learning models, is the dense layer. In this layer, every neuron connects to every other neuron in the previous layer.
+The next concept is neural network layers which vary based on the task you want to try and accomplish, some examples include convolutional layers which attempt to use neural networks on squares of pixels, dropout layers which randomly pick weights to drop to try and reduce overfitting. The most common layer used to most machine learning models, is the dense layer, in this layer, every neuron connects to every other neuron in the previous layer.
 \begin{figure}[H]
 \centering
 \includegraphics[width=8cm]{pictures/neural_network_model.png}
@@ -294,10 +294,10 @@ The next concept is neural network layers which vary based on the task you want 
 Each circle in this figure represents a neuron and each line in this figure represents a connection between 2 neurons. By manipulating the weights in the neural network, we change what each neuron calculates and outputs as part of its activation function. In doing so, we now have a framework of which for any given input, the neural network can generate any output (given the right weights), regardless of the complexity of the output\cite{nielsen}. 
 
 \subsection{Training}
-The next question about neural networks is then how are the weights calculated for a given input. This is where training a neural network comes into play. The basic summary for how a neural network is trained is they are fed the input data, the error amount is calculated from the difference between the neural network output and the expected output. Then the weights are slowly adjusted to minimize the error rate. How this is all done is where the complexity of neural networks lie and why they take so long to train. One of the simplest algorithms that implements this is the stochastic gradient descent algorithm, which is a core component of many other machine learning algorithms like RMSprop, ADAM and AdaGrad (RMSprop being a commonly used algorithm and the one that was used in the majority of the MNIST tests). 
+The next question about neural networks is then how are the weights calculated for a given input. This is where training a neural network comes into play. The basic summary for how a neural network is trained is they are fed the input data, the error amount is calculated from the difference between the neural network output and the expected output. Then the weights are slowly adjusted to minimize the error rate. The way this is done is where the complexity of neural networks lie and why they take so long to train. One of the simplest algorithms that implements this is the stochastic gradient descent algorithm, which is a core component of many other machine learning algorithms like RMSprop, ADAM and AdaGrad (RMSprop being a commonly used algorithm and the one that was used in the majority of the MNIST tests). 
 
 The gradient descent or GD works by measuring the gradient and trying to find a point at which the error is the lowest. The gradient being a measure of "how much the output of a function changes if you change the inputs a little bit"\cite{towards-data-science}.
-The best way of explaining GD is with a hill-climbing example, a blind person is trying to find the highest point of a hill and so he starts by taking large steps to estimate where the steepest part of the hill is and then smaller and smaller steps until he finds the top of the hill. Applying this to machine learning, the error of the output of the machine learning model is compared with the actual values that are to be expected and this is the error amount, then the weights are changed are relatively "large" amount and the error is measured again and compared to the previous error, this is the gradient. This gradient is then used to estimate how big of a "step"/how much to adjust the weights by on the next iteration.
+The best way of explaining GD is with a hill-climbing example, a blind person is trying to find the highest point of a hill and so he starts by taking large steps to estimate where the steepest part of the hill is, and then smaller and smaller steps until he finds the top of the hill. Applying this to machine learning, the error of the output of the machine learning model is compared with the actual values that are to be expected and this is the error amount, then the weights are changed are relatively "large" amount and the error is measured again and compared to the previous error, this is the gradient. This gradient is then used to estimate how big of a "step"/how much to adjust the weights by on the next iteration.
 \begin{figure}[H]
 \centering
 \includegraphics[width=6cm]{pictures/gradient.png}
@@ -306,7 +306,7 @@ Y-Axis represents accuracy rate}
 \label{fig:gradient}
 \end{figure}
 
-However in realities, there are much more dimensions to a machine learning model and secondly, there is not just one point that is the highest but multiple hills of varying heights, this is one of the many reasons why machine learning is hard. You can create simple machine learning algorithms that find a maximum point but not the global maximum point or the global maxima, you can also try and adjust how much you step by each amount but the best way, which requires all the computation power is a small stepping amount which tries all points on the "hills". 
+In reality, however, there will be many more dimensions to a machine learning model and there is not just one point that is the highest but multiple hills of varying heights, this is one of the many reasons why machine learning is complex. One can create a simple machine learning algorithm that finds a maximum point on the "hill" but this is not the global maximum point or the global maxima. Another way of approaching this is to try and adjust how much you "step" by, with the brute force options being an extremely small step, which tries all the points on the "hills" but would likely take a supercomputer and the heat death of the universe to finish. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{pictures/global_minima.png}
@@ -357,26 +357,26 @@ Since each layer is composed of neurons which take all the inputs and multiplies
 \caption{Matrix multiplication\cite{fig:matrix-multiply}.}
 \label{fig:neuron_model}
 \end{figure}
-What advantage can we get out of neural networks being represented this way? The major advantage is that the component responsible for rendering graphics on the computer, the GPU is extremely efficient at matrix multiplications partially because of the architecture is arranged for bandwidth instead of latency, partially because GPU's have multiple cores that run in parallel and mostly because 3D graphics are all about matrix multiplications to map 3D points to 2D through a camera matrix.
+What advantage can we get out of neural networks being represented this way? The major advantage is that the component responsible for rendering graphics on the computer, the GPU is extremely efficient at matrix multiplications partially because of the architecture is arranged for bandwidth instead of latency, partially because GPU's have multiple cores that run in parallel and mostly because 3D graphics are all about matrix multiplication to map 3D points to 2D through a camera matrix.
 
 \section{Stochastic computing}
 Stochastic computing is a branch of computing that relies on probabilistic bitstreams to calculate numbers, often relying on simple bit-wise operations. Every number in a stochastic computer is arranged as a probability of the ones and zeros in a continuous binary number stream\cite{6800290}. 
 
 \subsection{Advantages of stochastic numbers}
-There are 2 major advantages with this technique, one is that the system is extremely resistant to noise\cite{8122049}, flipping multiple bits in the stream will have very little effect or will only change the number minorly. The other major advantage is that certain operations have a simpler solution, for example in terms of multiplication on a conventional computer this would be a $n^2$ operation, however, on a stochastic computer, this is accomplished with an AND gate at a cost of $O(n)$.
+There are 2 major advantages with this technique, one is that the system is extremely resistant to noise\cite{8122049}, flipping multiple bits in the stream will have very little effect or will only change the number minorly. The other major advantage is that certain operations will have a simpler solution, for example in terms of multiplication on a conventional computer this would be a $n^2$ operation, however, on a stochastic computer, this is accomplished with an AND gate at a cost of $O(n)$.
 
 \subsection{Disadvantages of stochastic numbers}
 However, the reason for stochastic computing not being proliferated is the inherent weakness which is the randomness of stochastic numbers. Stochastic numbers can never truly represent the number they are trying to calculate and thus need a large amount of sampling to produce a more accurate result, they simply try to "emulate" a floating-point number by using the ratio of 1's and 0's as a probability.
 
 Secondly is that while stochastic numbers have a simple analog for multiplication, the core of stochastic numbers like the PRNG (Pseudo-random number generator) for generating the random bitstream and decoding the bitstream by sampling do not have simple gate-level analogues and this is where stochastic numbers lose their advantage.
 
-Lastly stochastic numbers do not take advantage of all of the states of a binary number. To represent 8 different numbers you need at least 8 bits ($n\ bits$), as opposed to a normal binary number where you only need 3 bits for 8 numbers or $log_2(n)\ bits$ of information.
+Lastly, stochastic numbers do not take advantage of all of the states of a binary number. To represent 8 different numbers you need at least 8 bits ($n\ bits$), as opposed to a normal binary number where you only need 3 bits for 8 numbers or $log_2(n)\ bits$ of information.
 
 %\section{Research into stochastic numbers}
 %TODO
 
 \section{The Idea}
-To help understand this concept, it is important to explain the origin of this idea of using stochastic numbers for machine learning. One of the underlying issues with neural networks is that they are slow and are sensitive to noise in the dataset. An idea to speed them up and to make them more noise resistant mainly comes from spiking neural networks. Spiking neural networks are built on the idea of artificial spiking neurons which are meant to be much more analogous to a human neuron, instead of matrix multiplications and activation functions, a spiking neuron is a neuron that takes in a stream of spikes of activity and after a certain threshold of spikes outputs its own spike, creating a so-called spike train. Stochastic numbers act in a similar way, you have spikes (1's) in a bitstream of information and process them in some way to get more or fewer spikes. Stochastic numbers are known to have properties that would make them beneficial in neural networks such properties include noise resistance and faster floating-point operations.
+To help understand this concept, it is important to explain the origin of this idea of using stochastic numbers for machine learning. One of the underlying issues with neural networks is that they are slow and are sensitive to noise in the dataset. An idea to speed them up and to make them more noise resistant mainly comes from spiking neural networks, spiking neural networks are built on the idea of artificial spiking neurons which are meant to be much more analogous to a human neuron, instead of matrix multiplications and activation functions. A spiking neuron is a neuron that takes in a stream of spikes of activity and after a certain threshold of spikes outputs its own spike, creating a so-called spike train. Stochastic numbers act in a similar way, you have spikes (1's) in a bitstream of information and process them in a particular way to get more or fewer spikes. Ultimately, the idea to use stochastic numbers came from its noise resistance and faster floating-point operations, properties that could make them beneficial to the overall speed of machine learning.
 %\begin{figure}[H]
 %\centering
 %\includegraphics[scale=0.4]{pictures/spikingneuron.jpg}
@@ -398,7 +398,7 @@ Both Tensorflow and PyTorch were originally used to emulated stochastic computin
 
 \chapter{Implementation}
 \section{Introduction}
-The primary idea behind this thesis was to create a system where we could reliably compare 2 machine learning systems with one using stochastic computing and the other using conventional computing. While attempts have been made in building up entirely new systems from the ground up using stochastic computing to accomplish a machine learning task\cite{hirtzlin2019stochastic}. As far as the research shows there have been little to no systems that use stochastic computing inside of existing machine learning framework such that both systems are on an even playing field and you aren't comparing oranges and apples. This was the goal we set out to accomplish, creating a system within an existing machine learning framework that could be applied to multiple datasets.
+The primary idea behind this thesis was to create a system where we could reliably compare 2 machine learning systems, with one using stochastic computing and the other using conventional computing. While attempts have been made in building up entirely new systems from the ground up using stochastic computing to accomplish a machine learning task\cite{hirtzlin2019stochastic}. As far as the research shows there have been little to no systems that use stochastic computing inside of existing machine learning framework such that both systems are on an even playing field and you aren't comparing oranges and apples. This was the goal we set out to accomplish, creating a system within an existing machine learning framework that could be applied to multiple datasets.
 
 \section{The design}
 Considering that the goal of this thesis was to compare stochastic computing and conventional computing in the field of machine learning, the first step would be to implement the core part of a machine learning framework which is the matrix multiplication, this consists of three parts, the conversion from a binary floating-point number to a stochastic number, the multiplication between the rows and columns of the matrix and finally the addition of each of the rows of the matrix. While most of these operations would be easy outside of a machine learning framework, implementing them within a machine learning framework requires a different way of thinking as each operation needs to be parallelizable and as such you are often restricted with what you are "allowed" to do, one such example of this is the heavy discouragement of the use of for loops\cite{broadcasting} as used incorrectly this requires the data being processed to be passed between the GPU and CPU and will likely cause massive slowdowns.
@@ -426,7 +426,7 @@ However in terms of a machine learning framework the following is done instead,
 
 This covers the general approach to converting binary numbers to stochastic numbers, converting them back means simply taking the mean of the entire array/matrix. However, while this covers the general approach some nuances need to be discussed. The first is the use of the random number generator, stochastic numbers are very sensitive to correlation\cite{8342234} and so each random number must be generated separately from the other, while a general pseudorandom number generator (PRNG) will certainly do the trick, there have been studies showing better results can be achieved with a customised PRNG\cite{lee2019synthesizing}, we decided against going down this route as it would be complicated to integrate and ultimately detract from the goal of this thesis.
 
-Another nuance of this algorithm is the size of the stochastic number, having more bits in your stochastic number will ultimately improve its performance but it comes at the cost of memory (which can balloon very quickly with large matrixes) and computational time. Plus after further investigation, we found that increasing the number of bits has diminishing effects.
+Another nuance of this algorithm is the size of the stochastic number, having more bits in your stochastic number will ultimately improve its performance but it comes at the cost of memory (which can balloon very quickly with large matrices) and computational time. Plus after further investigation, we found that increasing the number of bits has diminishing effects.
 
 As shown in the graph above, as the bits increase, the variance decreases but it reaches a point where the number of bits accounts for such a small change in the variance that it is ultimately not worth the memory or time. We did some research to try and find a way to have progressive accuracy with stochastic computing but we unable to find any instances of such a case. And finally the last nuance is the range of the stochastic numbers as the conditional (value $\geq$ random\_float(0,1)) will give a range on the stochastic numbers between 0 and 1, there exists an alternative form for negative numbers where the conditional becomes (value+1/2 $\geq$ random\_float(0,1) essentially the -1 to 1 range of value is mapped between 0 and 1. 
 
@@ -458,7 +458,7 @@ The next example is a multiplication with the bipolar format using a XNOR gate w
 \end{figure}
 
 \section{Addition}
-The last step of matrix multiplication is the addition, but this is the part where things didn't work out. So the first thing about stochastic addition is you cannot represent a number larger than what your stochastic range is, for example this means that you cannot represent a number larger than 1 if you are in a bipolar/unipolar format this means you have two forms of addition, saturating and non-saturating, in saturating addition it works similarly to normal addition with the exception that you cannot go over or under the limit (0/1 for unipolar, -1/1 for bipolar). In non-saturating addition, the resulting addition is divided by 2, this ensures that the stochastic number always stays within range.
+The last step of matrix multiplication is the addition, but this is the part where things didn't work out. A key aspect of stochastic addition is that a number cannot represent a number larger than what your stochastic range is. For example, a bipolar/unipolar format cannot represent a number larger than 1 and there are two forms of addition, saturating and non-saturating. Saturating addition works similarly to normal addition with the exception that you cannot go over or under the limit (0/1 for unipolar, -1/1 for bipolar). In non-saturating addition, the resulting addition is divided by 2, this ensures that the stochastic number always stays within range.
 
 However, the 2 caveats of stochastic addition lead to problems when trying to do matrix multiplication, starting the most common addition formation, non-saturating where a MUX gate is used as shown in the figure below.
 \begin{figure}[H]
@@ -483,7 +483,7 @@ The other problem is the weights, inside of a neural network are not bound, they
 %With the appeal of faster computing with stochastic computing, there has been quite a bit of research into how to get even more accurate results especially with an addition which tends to suffer from high accuracy loss. %TODO
 
 \section{Experiments}
-In order to judge the viability of using stochasitc computing operations to implement matrix multiplication, I've setup 3 experiments that measure the accuracy of stochastic computing using different formats and bitlength.
+To judge the viability of using stochastic computing operations to implement matrix multiplication, 3 experiments have been setup that measure the accuracy of stochastic computing using different formats and bitlength.
 
 \subsection{Accuracy of stochastic multiplication as a function of bitstream length}
 The first experiment is regarding the accuracy of the multiplication of stochastic numbers, this is the bread and butter of stochastic numbers and the most commonly flouted operation in terms of speed and accuracy.
@@ -491,10 +491,10 @@ The experiment measures the accuracy of computing $0.5\cdot 0.25$ with different
 The second experiment expands upon this and using a sampling of 20 different random numbers, averaging the difference between the intended result and the received result.
 
 \subsection{Accuracy of stochastic addition as a function of bitstream length}
-This set of experiments is very similar to the first, with example graphs generated with $0.5\cdot 0.25$ and the absolute difference graph being generated in the same way. However to highlight the oddities of saturating addition at higher values, a number of graphs highlighting low values ($<0.5$), high values ($>0.5$) and a step graph were generated.
+This set of experiments is very similar to the first, with example graphs generated with $0.5\cdot 0.25$ and the absolute difference graph being generated in the same way. However, to highlight the oddities of saturating addition at higher values, several graphs highlighting low values ($<0.5$), high values ($>0.5$) and a step graph were generated.
 
-\subsection{Division of bitstream to improve stochastic addition}
-The last experiment consisted of a new idea proposed to try and get around issues regarding stochastic numbers and their limited range. The idea consisted of spliting the bitstream into 2 bitstreams, one containing the integer component  and the other containing the floating-point component. The split stochastic number still has a range which has to be predefined beforehand, it is essentially a multiplier for the integer component.
+\subsection{Division of the bitstream to improve stochastic addition}
+The last experiment consisted of a new idea proposed to try and get around issues regarding stochastic numbers and their limited range. The idea consisted of splitting the bitstream into 2 bitstreams, one containing the integer component and the other containing the floating-point component. The split stochastic number still has a range which has to be predefined beforehand, it is essentially a multiplier for the integer component.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{pictures/Split-number.png}
@@ -506,7 +506,7 @@ The graphs generated compare both a normal unipolar stochastic multiplication wi
 \chapter{Results}
 
 \section{Introduction}
-In this section, I share some of the results and graphs I've made and talk about what this means in the context of my thesis.
+This section consists of the multiplication, addition and splitting stochastic number graphs, highlighting things inside of the graphs and how it ties together overall.
 
 \section{Multiplication results}
 \subsection{Unipolar multiplication accuracy}
@@ -592,7 +592,7 @@ In the first graph, the resulting addition should be $0.81+0.1=0.91$ but the sto
 \end{figure}
 As a result of the addition approaches 1, the addition becomes offset from the target by an ever-increasing amount. This seems to match up closely with an algorithmic anaylsis of stochastic computing which states that a saturating addition computes to $X = a+b-a\cdot b$\cite{logic-gates}, such that when $a$ and $b$ becomes larger so does $a\cdot b$.
 
-\section{Spliting the bitstream}
+\section{Splitting the bitstream}
 One of my proposals to get around the limitations the accuracy of stochastic bitstreams was to split the bitstream into two parts, one containing the decimal part and the other containing the integer component. This is a new and novel idea with the hope that splitting the bitstream into two parts would keep the high accuracy for the decimal part and because the integer component is only composed of whole numbers we could use a smaller bitstream length to represent more integers and gain more accuracy, this is especially relevant when considering the diminishing returns on increasing the bitstream for more accuracy.
 \begin{figure}[H]
 \centering
@@ -613,10 +613,12 @@ The first figure above shows a stochastic addition with the absolute difference 
 
 \section{Conclusions}
 \label{sec:ConclusionsConclusions}
-In conclusion, trying to apply stochastic computing to the field of machine learning through matrix operations alone is unlikely to succeed. Stochastic computing needs a lot more groundwork, regarding the inaccuracy and range limitation to be used outside its field and for stochastic computing to be able to be fully integrated with machine learning there will need to be a large paradigm shift in how they are used and applied. %TODO Cleanup conclusion
+In conclusion, this thesis explores the preliminary groundwork for trying to use stochastic computing inside the field of machine learning, the core element of which is matrix multiplications. Matrix multiplications are composed of both multiplications and additions, so this thesis looks at the accuracy and limitations of stochastic numbers when trying to implement a matrix multiplication. Overall the accuracy achieved by the stochastic numbers proved to within the rough range of ($<0.01$). %TODO
+
+Trying to apply stochastic computing to the field of machine learning through matrix operations alone is unlikely to succeed. Stochastic computing needs a lot more groundwork, regarding the inaccuracy and range limitation to be used outside its field and for stochastic computing to be able to be fully integrated with machine learning there will need to be a large paradigm shift in how they are used and applied.
 
 \chapter{Future Work}
-The current design I have proposed has certain limitations and bounds that make it suitable for application regarding machine learning, as such this section will describe, future work to try and accomplish this goal as well as describing a theoretical device that would be able to work with neural networks.
+In the current design, there exists certain limitations and bounds that make it suitable for application regarding machine learning, as such this section will describe, future work to try and accomplish this goal as well as describing a theoretical device that would be able to work with neural networks.
 
 \subsection{Limitation 1}
 The first limitation of my design is the memory limits, as I'm emulating a stochastic bitstream, each number in the matrix gets expanded out and this can easily exceed memory limits. The solution to this a way of a restructuring of the machine learning framework to accept a stream of data, this way only a few bits are being processed at a time. The difficulty here is that machine learning frameworks are not based around the idea of streaming data, batches of data are loaded onto the GPU and processed but this is at a very low level and it is very likely you would need to heavily restructure the machine learning framework, which is where a secondary problem comes in which is by modifying the machine learning framework to work with streams it becomes very hard to compare 2 results (other than raw accuracy) with each other as the calculations have changed and are no longer 1 to 1 comparable.
