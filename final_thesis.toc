@@ -5,43 +5,46 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Neural networks: Introduction}{1}{section.1.1}% 
 \contentsline {chapter}{\numberline {2}Background and Related Work}{2}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Neural networks: introduction}{2}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Project goal}{2}{section.2.2}% 
-\contentsline {chapter}{\numberline {3}Background and Related Work}{3}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Neural networks: explanation}{3}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Training}{5}{subsection.3.1.1}% 
-\contentsline {section}{\numberline {3.2}Complexities of neural networks}{7}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Overfitting and underfitting}{7}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Complexities}{8}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}Research into neural network complexity}{8}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}Matrices in neural networks}{8}{section.3.4}% 
-\contentsline {section}{\numberline {3.5}Stochastic computing}{9}{section.3.5}% 
-\contentsline {subsection}{\numberline {3.5.1}Advantages of stochastic numbers}{10}{subsection.3.5.1}% 
-\contentsline {subsection}{\numberline {3.5.2}Disadvantages of stochastic numbers}{10}{subsection.3.5.2}% 
-\contentsline {section}{\numberline {3.6}Machine learning frameworks}{10}{section.3.6}% 
-\contentsline {section}{\numberline {3.7}Tensorflow}{10}{section.3.7}% 
-\contentsline {section}{\numberline {3.8}PyTorch}{11}{section.3.8}% 
-\contentsline {section}{\numberline {3.9}The Idea}{11}{section.3.9}% 
-\contentsline {chapter}{\numberline {4}Implementation}{13}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Introduction}{13}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}The design}{13}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}The conversion}{14}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Format}{15}{section.4.4}% 
-\contentsline {section}{\numberline {4.5}Multiplication}{15}{section.4.5}% 
-\contentsline {section}{\numberline {4.6}Addition}{16}{section.4.6}% 
-\contentsline {chapter}{\numberline {5}Results}{18}{chapter.5}% 
-\contentsline {subsection}{\numberline {5.0.1}Introduction}{18}{subsection.5.0.1}% 
-\contentsline {subsection}{\numberline {5.0.2}Unipolar multiplication accuracy}{18}{subsection.5.0.2}% 
-\contentsline {subsection}{\numberline {5.0.3}Bipolar multiplication accuracy}{20}{subsection.5.0.3}% 
-\contentsline {subsection}{\numberline {5.0.4}Non saturating addition accuracy}{21}{subsection.5.0.4}% 
-\contentsline {subsection}{\numberline {5.0.5}Saturating addition accuracy}{23}{subsection.5.0.5}% 
-\contentsline {subsection}{\numberline {5.0.6}Spliting the bitstream}{25}{subsection.5.0.6}% 
-\contentsline {chapter}{\numberline {6}Future Work}{28}{chapter.6}% 
-\contentsline {subsection}{\numberline {6.0.1}Limitation 1}{28}{subsection.6.0.1}% 
-\contentsline {subsection}{\numberline {6.0.2}Limitation 2}{28}{subsection.6.0.2}% 
-\contentsline {subsection}{\numberline {6.0.3}Theoretical device}{29}{subsection.6.0.3}% 
-\contentsline {chapter}{\numberline {7}Conclusions}{30}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Conclusions}{30}{section.7.1}% 
-\contentsline {chapter}{\numberline {8}Abbreviations}{31}{chapter.8}% 
+\contentsline {section}{\numberline {2.1}Neural networks: explanation}{2}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Training}{4}{subsection.2.1.1}% 
+\contentsline {section}{\numberline {2.2}Complexities of neural networks}{6}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Overfitting and underfitting}{6}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Complexities}{7}{subsection.2.2.2}% 
+\contentsline {section}{\numberline {2.3}Research into neural network complexity}{7}{section.2.3}% 
+\contentsline {section}{\numberline {2.4}Matrices in neural networks}{7}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Stochastic computing}{8}{section.2.5}% 
+\contentsline {subsection}{\numberline {2.5.1}Advantages of stochastic numbers}{9}{subsection.2.5.1}% 
+\contentsline {subsection}{\numberline {2.5.2}Disadvantages of stochastic numbers}{9}{subsection.2.5.2}% 
+\contentsline {section}{\numberline {2.6}The Idea}{9}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Tensorflow}{10}{section.2.7}% 
+\contentsline {section}{\numberline {2.8}PyTorch}{10}{section.2.8}% 
+\contentsline {section}{\numberline {2.9}Problems implementing stochastic computing in existing machine learning frameworks}{10}{section.2.9}% 
+\contentsline {chapter}{\numberline {3}Implementation}{11}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Introduction}{11}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}The design}{11}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}The conversion}{12}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Format}{13}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Multiplication}{13}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Addition}{14}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Experiments}{16}{section.3.7}% 
+\contentsline {subsection}{\numberline {3.7.1}Accuracy of stochastic multiplication as a function of bitstream length}{16}{subsection.3.7.1}% 
+\contentsline {subsection}{\numberline {3.7.2}Accuracy of stochastic addition as a function of bitstream length}{16}{subsection.3.7.2}% 
+\contentsline {subsection}{\numberline {3.7.3}Division of bitstream to improve stochastic addition}{16}{subsection.3.7.3}% 
+\contentsline {chapter}{\numberline {4}Results}{18}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Introduction}{18}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Multiplication results}{18}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Unipolar multiplication accuracy}{18}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Bipolar multiplication accuracy}{20}{subsection.4.2.2}% 
+\contentsline {section}{\numberline {4.3}Addition results}{21}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Non saturating addition accuracy}{21}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Saturating addition accuracy}{23}{subsection.4.3.2}% 
+\contentsline {section}{\numberline {4.4}Spliting the bitstream}{25}{section.4.4}% 
+\contentsline {chapter}{\numberline {5}Conclusions}{28}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Conclusions}{28}{section.5.1}% 
+\contentsline {chapter}{\numberline {6}Future Work}{29}{chapter.6}% 
+\contentsline {subsection}{\numberline {6.0.1}Limitation 1}{29}{subsection.6.0.1}% 
+\contentsline {subsection}{\numberline {6.0.2}Limitation 2}{29}{subsection.6.0.2}% 
+\contentsline {subsection}{\numberline {6.0.3}Theoretical device}{30}{subsection.6.0.3}% 
+\contentsline {chapter}{\numberline {7}Abbreviations}{31}{chapter.7}% 
 \contentsline {section}{\numberline {.1}Codebase and results}{31}{section.Alph0.1}% 
 \contentsline {chapter}{Bibliography}{31}{section*.30}% 

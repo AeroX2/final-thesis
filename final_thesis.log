@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.5.15)  5 NOV 2019 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.5.15)  7 NOV 2019 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -355,12 +355,6 @@ Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 ))
 (./final_thesis.aux
 
-LaTeX Warning: Label `chap:LitReview' multiply defined.
-
-
-LaTeX Warning: Label `fig:neuron_model' multiply defined.
-
-
 LaTeX Warning: Label `fig:neuron_model' multiply defined.
 
 
@@ -457,7 +451,7 @@ LaTeX Info: Redefining \nameref on input line 218.
 \@outlinefile=\write3
 \openout3 = `final_thesis.out'.
 
-<MQlogo_stacked.pdf, id=200, 219.12566pt x 208.59329pt>
+<MQlogo_stacked.pdf, id=213, 219.12566pt x 208.59329pt>
 File: MQlogo_stacked.pdf Graphic file (type pdf)
 <use MQlogo_stacked.pdf>
 Package pdftex.def Info: MQlogo_stacked.pdf  used on input line 226.
@@ -518,177 +512,169 @@ Chapter 1.
 
 ]
 Chapter 2.
+<pictures/neuron_model.png, id=390, 357.7365pt x 172.36395pt>
+File: pictures/neuron_model.png Graphic file (type png)
+<use pictures/neuron_model.png>
+Package pdftex.def Info: pictures/neuron_model.png  used on input line 273.
+(pdftex.def)             Requested size: 227.62204pt x 109.6708pt.
 [2
 
 ]
-Chapter 3.
-<pictures/neuron_model.png, id=378, 357.7365pt x 172.36395pt>
-File: pictures/neuron_model.png Graphic file (type png)
-<use pictures/neuron_model.png>
-Package pdftex.def Info: pictures/neuron_model.png  used on input line 284.
-(pdftex.def)             Requested size: 227.62204pt x 109.6708pt.
-[3
-
-]
-<pictures/sigmoid.png, id=388, 77.088pt x 51.3117pt>
+<pictures/sigmoid.png, id=400, 77.088pt x 51.3117pt>
 File: pictures/sigmoid.png Graphic file (type png)
 <use pictures/sigmoid.png>
-Package pdftex.def Info: pictures/sigmoid.png  used on input line 292.
+Package pdftex.def Info: pictures/sigmoid.png  used on input line 281.
 (pdftex.def)             Requested size: 227.62204pt x 151.52946pt.
-<pictures/neural_network_model.png, id=392, 1204.5pt x 1448.41125pt>
+<pictures/neural_network_model.png, id=404, 1204.5pt x 1448.41125pt>
 File: pictures/neural_network_model.png Graphic file (type png)
 <use pictures/neural_network_model.png>
 Package pdftex.def Info: pictures/neural_network_model.png  used on input line 
-300.
+289.
 (pdftex.def)             Requested size: 227.62204pt x 273.69814pt.
- [4 <./pictures/neuron_model.png (PNG copy)> <./pictures/sigmoid.png>]
-<pictures/gradient.png, id=402, 163.5711pt x 142.6128pt>
+ [3 <./pictures/neuron_model.png (PNG copy)> <./pictures/sigmoid.png>]
+<pictures/gradient.png, id=414, 163.5711pt x 142.6128pt>
 File: pictures/gradient.png Graphic file (type png)
 <use pictures/gradient.png>
-Package pdftex.def Info: pictures/gradient.png  used on input line 314.
+Package pdftex.def Info: pictures/gradient.png  used on input line 303.
 (pdftex.def)             Requested size: 170.71652pt x 148.8491pt.
 
-[5 <./pictures/neural_network_model.png>]
-<pictures/global_minima.png, id=409, 316.7835pt x 188.50426pt>
+[4 <./pictures/neural_network_model.png>]
+<pictures/global_minima.png, id=421, 316.7835pt x 188.50426pt>
 File: pictures/global_minima.png Graphic file (type png)
 <use pictures/global_minima.png>
-Package pdftex.def Info: pictures/global_minima.png  used on input line 323.
+Package pdftex.def Info: pictures/global_minima.png  used on input line 312.
 (pdftex.def)             Requested size: 284.52756pt x 169.30997pt.
- [6 <./pictures/gradient.png>]
-[7 <./pictures/global_minima.png>] [8]
+ [5 <./pictures/gradient.png>]
+[6 <./pictures/global_minima.png>] [7]
 File: pictures/neuron_model.png Graphic file (type png)
 <use pictures/neuron_model.png>
-Package pdftex.def Info: pictures/neuron_model.png  used on input line 361.
+Package pdftex.def Info: pictures/neuron_model.png  used on input line 350.
 (pdftex.def)             Requested size: 227.62204pt x 109.6708pt.
-<pictures/matrix-multiply.png, id=448, 428.60126pt x 210.7875pt>
+<pictures/matrix-multiply.png, id=460, 428.60126pt x 210.7875pt>
 File: pictures/matrix-multiply.png Graphic file (type png)
 <use pictures/matrix-multiply.png>
-Package pdftex.def Info: pictures/matrix-multiply.png  used on input line 367.
+Package pdftex.def Info: pictures/matrix-multiply.png  used on input line 356.
 (pdftex.def)             Requested size: 214.3001pt x 105.3935pt.
- [9 <./pictures/matrix-multiply.png>]
-[10]
-<pictures/spikingneuron.jpg, id=469, 597.23125pt x 341.275pt>
-File: pictures/spikingneuron.jpg Graphic file (type jpg)
-<use pictures/spikingneuron.jpg>
-Package pdftex.def Info: pictures/spikingneuron.jpg  used on input line 404.
-(pdftex.def)             Requested size: 298.61488pt x 170.63707pt.
- [11] [12 <./pictures/spikingneuron.jpg>]
-Chapter 4.
-[13
+ [8 <./pictures/matrix-multiply.png>]
+[9] [10]
+Chapter 3.
+[11
 
 ]
-Overfull \hbox (26.40616pt too wide) in paragraph at lines 429--429
+Overfull \hbox (26.40616pt too wide) in paragraph at lines 418--418
 []\OT1/cmtt/m/n/12 stochastic_num = [1 if random.random() <= prob1 else 0 for n
  in range(length)] 
  []
 
-[14]
-<pictures/mult.png, id=506, 75.8835pt x 43.8438pt>
+[12]
+<pictures/mult.png, id=509, 75.8835pt x 43.8438pt>
 File: pictures/mult.png Graphic file (type png)
 <use pictures/mult.png>
-Package pdftex.def Info: pictures/mult.png  used on input line 457.
+Package pdftex.def Info: pictures/mult.png  used on input line 446.
 (pdftex.def)             Requested size: 151.7666pt x 87.68735pt.
- [15]
-<pictures/mult_xnor.png, id=515, 75.8835pt x 43.8438pt>
+ [13]
+<pictures/mult_xnor.png, id=518, 75.8835pt x 43.8438pt>
 File: pictures/mult_xnor.png Graphic file (type png)
 <use pictures/mult_xnor.png>
-Package pdftex.def Info: pictures/mult_xnor.png  used on input line 466.
+Package pdftex.def Info: pictures/mult_xnor.png  used on input line 455.
 (pdftex.def)             Requested size: 151.7666pt x 87.68735pt.
-<pictures/add.png, id=516, 76.1244pt x 52.7571pt>
+<pictures/add.png, id=519, 76.1244pt x 52.7571pt>
 File: pictures/add.png Graphic file (type png)
 <use pictures/add.png>
-Package pdftex.def Info: pictures/add.png  used on input line 477.
+Package pdftex.def Info: pictures/add.png  used on input line 466.
 (pdftex.def)             Requested size: 152.24841pt x 105.51392pt.
- [16 <./pictures/mult.png> <./pictures/mult_xnor.png>] [17 <./pictures/add.png>
+ [14 <./pictures/mult.png> <./pictures/mult_xnor.png>] [15 <./pictures/add.png>
 ]
-Chapter 5.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 497.
-
-<results/Figure_1.png, id=532, 925.056pt x 693.792pt>
-File: results/Figure_1.png Graphic file (type png)
-<use results/Figure_1.png>
-Package pdftex.def Info: results/Figure_1.png  used on input line 504.
+<pictures/Split-number.png, id=535, 441.65pt x 472.76625pt>
+File: pictures/Split-number.png Graphic file (type png)
+<use pictures/Split-number.png>
+Package pdftex.def Info: pictures/Split-number.png  used on input line 500.
+(pdftex.def)             Requested size: 176.65686pt x 189.10315pt.
+ [16] [17 <./pictures/Split-number.png>]
+Chapter 4.
+<results/mult.png, id=545, 925.056pt x 693.792pt>
+File: results/mult.png Graphic file (type png)
+<use results/mult.png>
+Package pdftex.def Info: results/mult.png  used on input line 516.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
-<results/Figure_1-abs.png, id=533, 925.056pt x 693.792pt>
-File: results/Figure_1-abs.png Graphic file (type png)
-<use results/Figure_1-abs.png>
-Package pdftex.def Info: results/Figure_1-abs.png  used on input line 510.
+<results/mult-abs.png, id=546, 925.056pt x 693.792pt>
+File: results/mult-abs.png Graphic file (type png)
+<use results/mult-abs.png>
+Package pdftex.def Info: results/mult-abs.png  used on input line 522.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
 [18
 
-] [19 <./results/Figure_1.png> <./results/Figure_1-abs.png>]
-<results/Figure_1_bi.png, id=545, 925.056pt x 693.792pt>
-File: results/Figure_1_bi.png Graphic file (type png)
-<use results/Figure_1_bi.png>
-Package pdftex.def Info: results/Figure_1_bi.png  used on input line 520.
+] [19 <./results/mult.png> <./results/mult-abs.png>]
+<results/mult-bi.png, id=558, 925.056pt x 693.792pt>
+File: results/mult-bi.png Graphic file (type png)
+<use results/mult-bi.png>
+Package pdftex.def Info: results/mult-bi.png  used on input line 532.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
-<results/Figure_1_bi_abs.png, id=546, 925.056pt x 693.792pt>
-File: results/Figure_1_bi_abs.png Graphic file (type png)
-<use results/Figure_1_bi_abs.png>
-Package pdftex.def Info: results/Figure_1_bi_abs.png  used on input line 526.
+<results/mult-bi-abs.png, id=559, 925.056pt x 693.792pt>
+File: results/mult-bi-abs.png Graphic file (type png)
+<use results/mult-bi-abs.png>
+Package pdftex.def Info: results/mult-bi-abs.png  used on input line 538.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
- [20 <./results/Figure_1_bi.png>]
-<results/Figure_2.png, id=552, 925.056pt x 693.792pt>
-File: results/Figure_2.png Graphic file (type png)
-<use results/Figure_2.png>
-Package pdftex.def Info: results/Figure_2.png  used on input line 537.
+ [20 <./results/mult-bi.png>]
+<results/add-bi.png, id=565, 925.056pt x 693.792pt>
+File: results/add-bi.png Graphic file (type png)
+<use results/add-bi.png>
+Package pdftex.def Info: results/add-bi.png  used on input line 550.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
-<results/Figure_2-abs.png, id=553, 925.056pt x 693.792pt>
-File: results/Figure_2-abs.png Graphic file (type png)
-<use results/Figure_2-abs.png>
-Package pdftex.def Info: results/Figure_2-abs.png  used on input line 543.
+<results/add-bi-abs.png, id=566, 925.056pt x 693.792pt>
+File: results/add-bi-abs.png Graphic file (type png)
+<use results/add-bi-abs.png>
+Package pdftex.def Info: results/add-bi-abs.png  used on input line 556.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
- [21 <./results/Figure_1_bi_abs.png>] [22 <./results/Figure_2.png> <./results/F
-igure_2-abs.png>]
-<results/Figure_3.png, id=565, 925.056pt x 693.792pt>
+ [21 <./results/mult-bi-abs.png>] [22 <./results/add-bi.png> <./results/add-bi-
+abs.png>]
+<results/Figure_3.png, id=578, 925.056pt x 693.792pt>
 File: results/Figure_3.png Graphic file (type png)
 <use results/Figure_3.png>
-Package pdftex.def Info: results/Figure_3.png  used on input line 554.
+Package pdftex.def Info: results/Figure_3.png  used on input line 567.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
-<results/Figure_3_high.png, id=566, 925.056pt x 693.792pt>
+<results/Figure_3_high.png, id=579, 925.056pt x 693.792pt>
 File: results/Figure_3_high.png Graphic file (type png)
 <use results/Figure_3_high.png>
-Package pdftex.def Info: results/Figure_3_high.png  used on input line 561.
+Package pdftex.def Info: results/Figure_3_high.png  used on input line 574.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
-<results/Figure_3_low.png, id=567, 925.056pt x 693.792pt>
+<results/Figure_3_low.png, id=580, 925.056pt x 693.792pt>
 File: results/Figure_3_low.png Graphic file (type png)
 <use results/Figure_3_low.png>
-Package pdftex.def Info: results/Figure_3_low.png  used on input line 567.
+Package pdftex.def Info: results/Figure_3_low.png  used on input line 580.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
  [23 <./results/Figure_3.png>] [24 <./results/Figure_3_high.png> <./results/Fig
 ure_3_low.png>]
-<results/Figure_3_sss.png, id=580, 925.056pt x 693.792pt>
+<results/Figure_3_sss.png, id=593, 925.056pt x 693.792pt>
 File: results/Figure_3_sss.png Graphic file (type png)
 <use results/Figure_3_sss.png>
-Package pdftex.def Info: results/Figure_3_sss.png  used on input line 576.
+Package pdftex.def Info: results/Figure_3_sss.png  used on input line 589.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
-<results/Figure_4.png, id=582, 925.056pt x 693.792pt>
-File: results/Figure_4.png Graphic file (type png)
-<use results/Figure_4.png>
-Package pdftex.def Info: results/Figure_4.png  used on input line 586.
+<results/split-add.png, id=595, 925.056pt x 693.792pt>
+File: results/split-add.png Graphic file (type png)
+<use results/split-add.png>
+Package pdftex.def Info: results/split-add.png  used on input line 599.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
- [25 <./results/Figure_3_sss.png>]
-<results/Figure_5.png, id=589, 925.056pt x 693.792pt>
-File: results/Figure_5.png Graphic file (type png)
-<use results/Figure_5.png>
-Package pdftex.def Info: results/Figure_5.png  used on input line 593.
+<results/split-mult.png, id=596, 925.056pt x 693.792pt>
+File: results/split-mult.png Graphic file (type png)
+<use results/split-mult.png>
+Package pdftex.def Info: results/split-mult.png  used on input line 605.
 (pdftex.def)             Requested size: 370.01584pt x 277.51187pt.
- [26 <./results/Figure_4.png>] [27 <./results/Figure_5.png>]
+ [25 <./results/Figure_3_sss.png>] [26 <./results/split-add.png> <./results/spl
+it-mult.png>] [27]
+Chapter 5.
+[28
+
+]
 Chapter 6.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 601.
+(hyperref)                than one, level fixed on input line 621.
 
-[28
+[29
 
-] [29]
+] [30]
 Chapter 7.
-[30
-
-]
-Chapter 8.
 (./final_thesis.bbl [31
 
 
@@ -708,28 +694,28 @@ e]. Avail-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 649.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 662.
  [34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 649.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 662.
  (./final_thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 649.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 649.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 662.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 662.
 Package rerunfilecheck Info: File `final_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F551932A55552E80828E21D4DDCB1747;3333.
+(rerunfilecheck)             Checksum: 7D5A31BBE83BA86E1D9354DBCCC40692;3709.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 649.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 662.
  ) 
 Here is how much of TeX's memory you used:
- 8396 strings out of 494518
- 124301 string characters out of 6176313
- 221192 words of memory out of 5000000
- 11776 multiletter control sequences out of 15000+600000
+ 8400 strings out of 494518
+ 124295 string characters out of 6176313
+ 221248 words of memory out of 5000000
+ 11779 multiletter control sequences out of 15000+600000
  11577 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,12n,43p,1071b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,43p,1070b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
@@ -742,10 +728,10 @@ fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
-Output written on final_thesis.pdf (41 pages, 1364193 bytes).
+Output written on final_thesis.pdf (41 pages, 1290562 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 618 compressed objects within 7 object streams
- 153 named destinations out of 1000 (max. 500000)
- 508 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 758 PDF objects out of 1000 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 532 words of extra memory for PDF output out of 10000 (max. 10000000)
 
